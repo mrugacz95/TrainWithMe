@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/main"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Main" />
+        <item
+            android:id="@+id/plan_travel"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Plan travel" />
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Chat" />
+        <item
+            android:id="@+id/travel_history"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Travel history" />
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Profile" />
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_menu_send"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

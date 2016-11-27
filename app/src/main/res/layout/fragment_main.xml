@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.trainwithme.fragments.MainFragment"
+    android:padding="@dimen/activity_margin">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="10dp"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/mdtp_year_label_text_size"
+                android:text="Let's plan your future travel or find people in your train"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <Button
+                android:layout_marginTop="20dp"
+                style="@style/AppButton"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_plan_travel"
+                android:text="@string/plan_travel"/>
+            <Button
+                android:layout_marginTop="10dp"
+                style="@style/AppButton"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_find_people"
+                android:text="@string/find_people"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view2"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_marginTop="10dp"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your travels"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/mdtp_year_label_text_size"
+                android:gravity="center"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:id="@+id/rv_planned_travels"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

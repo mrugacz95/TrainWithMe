@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.trainwithme.fragments.FormFragment"
+    android:id="@+id/container">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll_view"
+        android:layout_above="@+id/bt_check">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_date"
+                android:background="@color/colorPrimary">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ll_date">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    tools:text="21 Marzec 2016"
+                    android:textSize="20dp"
+                    android:id="@+id/string_date"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_date"
+                    android:background="@drawable/buttonflatbackground"
+                    android:textColor="@color/colorAccent"
+                    android:minHeight="20dp"
+                    android:minWidth="40dp"
+                    android:layout_margin="4dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/set_date"/>
+
+            </LinearLayout>
+            </android.support.v7.widget.CardView></RelativeLayout>
+            <TimePicker
+
+                android:id="@+id/time_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/TimePicker"
+                android:layout_below="@id/card_date"
+                />
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/time_picker">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/FromButton"
+                        android:text="@string/departure_station" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/FromButton"
+                        android:text="@string/final_station" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/tv_departure_station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:height="45dp"
+                        android:hint="@string/departure_station" />
+
+                    <EditText
+                        android:id="@+id/tv_final_station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:height="45dp"
+                        android:hint="@string/final_station" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/check"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="0dp"
+        style="@style/AppButton"
+        android:id="@+id/bt_check"/>
+
+</RelativeLayout>
